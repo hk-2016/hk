@@ -8,7 +8,7 @@ public class HkArrayList {
 	private  Object[] elementData;
 	private int size;
 	
-	//¹¹ÔìÆ÷
+	//æ„é€ å™¨
 	public HkArrayList(){
 		this.elementData=new Object[10];
 	}
@@ -23,7 +23,7 @@ public class HkArrayList {
 		return true;
 	}
 	
-	//ÖØÔØadd·½·¨Í¨¹ıÏÂ±êÀ´Ìí¼Ó
+	//é‡è½½addæ–¹æ³•é€šè¿‡ä¸‹æ ‡æ¥æ·»åŠ 
 	public boolean add(int index,Object o){
 		rangeCheck(index);
 		ensureCapacityInternal(size+1);
@@ -39,19 +39,19 @@ public class HkArrayList {
         return elementData[index];
     }
 	
-	//¼ì²é¸ø¶¨ÏÂ±êÊÇ·ñ·ûºÏ¹æÔò
+	//æ£€æŸ¥ç»™å®šä¸‹æ ‡æ˜¯å¦ç¬¦åˆè§„åˆ™
 	private void rangeCheck(int index){
 		if(index>size||index<0){
-			throw new IndexOutOfBoundsException("ÏÂ±êÓĞÎó£¬Index:"+index+",size:"+size);
+			throw new IndexOutOfBoundsException("ä¸‹æ ‡æœ‰è¯¯ï¼ŒIndex:"+index+",size:"+size);
 		}
 	}
 	
 	private void ensureCapacityInternal(int minCapacity) {
         if (minCapacity - elementData.length > 0){
-        	//ĞèÒªµÄ×îĞ¡ÈİÁ¿ÒÑ¾­´óÓÚÁËÊı×éµÄ³¤¶È£¬´ËÊ±ĞèÒªÀ©Èİ
+        	//éœ€è¦çš„æœ€å°å®¹é‡å·²ç»å¤§äºäº†æ•°ç»„çš„é•¿åº¦ï¼Œæ­¤æ—¶éœ€è¦æ‰©å®¹
         	int oldCapacity=elementData.length;
         	int newCapacity=(oldCapacity*3)/2;
-        	//Èç¹ûÀ©Èİ1.5±¶»¹²»¹»£¬Ôò½«´«ÈëµÄ³¤¶ÈÎªĞÂ³¤¶È
+        	//å¦‚æœæ‰©å®¹1.5å€è¿˜ä¸å¤Ÿï¼Œåˆ™å°†ä¼ å…¥çš„é•¿åº¦ä¸ºæ–°é•¿åº¦
         	if (newCapacity - minCapacity < 0)
         		newCapacity=minCapacity;
         	elementData=Arrays.copyOf(elementData, newCapacity);

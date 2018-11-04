@@ -12,7 +12,7 @@ public class TestCollection {
 		list.add(1);
 		list.add(2);
 		list.add(3);
-		list.add(2, "2位置是我先添加进来的");
+		list.add(2, "2浣嶇疆鏄垜鍏堟坊鍔犺繘鏉ョ殑");
 		list.add("sdjkhfkjsak");
 		list.add("sdjkhfkjsak1111");
 		list.add("sdjkhfkjsak2222");

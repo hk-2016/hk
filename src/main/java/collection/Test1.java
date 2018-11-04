@@ -33,7 +33,7 @@ public class Test1 {
                 System.out.println(Thread.currentThread().getId()+" sleep InterruptedException:"
                         +Thread.currentThread().isInterrupted());
             }
-            System.out.println("任务 " + name + " 完成");
+            System.out.println("任务 " + name + " 完成1");
         }
     }
 
